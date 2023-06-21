@@ -16,6 +16,10 @@ const balances = {
 };
 
 app.get("/balance/:address", (req, res) => {
+  //TODO: get a signature from the client-side application 
+  // recover the public address from the signature
+  
+
   const { address } = req.params;
   const balance = balances[address] || 0;
   res.send({ balance });
